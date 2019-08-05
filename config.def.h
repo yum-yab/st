@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "UbuntuMono-Regular:pixelsize=14:antialias=true:autohint=true";
+static char *font = "UbuntuMono-Regular:pixelsize=16:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -116,7 +116,7 @@ static const char *colorname[] = {
  * foreground, background, cursor, reverse cursor
  */
 unsigned int defaultfg = 258;
-unsigned int defaultbg = 259;
+unsigned int defaultbg = 0;
 static unsigned int defaultcs = 256;
 static unsigned int defaultrcs = 257;
 
