@@ -84,30 +84,29 @@ unsigned int tabspaces = 8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-        "#1C1B19",
-        "#EF2F27",
-        "#519F50",
-        "#FBB829",
-        "#2C78BF",
-        "#E02C6D",
-        "#0AAEB3",
-        "#918175",
-        "#2D2C29",
-        "#F75341",
-        "#98BC37",
-        "#FED06E",
-        "#68A8E4",
-        "#FF5C8F",
-        "#53FDE9",
-        "#FCE8C3",
+        "#1C1B19", // 0 - black
+        "#EF2F27", // 1 - red
+        "#519F50", // 2 - green
+        "#FBB829", // 3 - yellow
+        "#2C78BF", // 4 - blue
+        "#E02C6D", // 5 - magenta
+        "#0AAEB3", // 6 - cyan
+        "#918175", // 7 - white
+
+        "#2D2C29", // 8 - bright black
+        "#F75341", // 9 - bright red
+        "#98BC37", // 10 -bright green
+        "#FED06E", // 11 -bright yellow
+        "#68A8E4", // 12 -bright blue
+        "#FF5C8F", // 13 -bright magenta
+        "#53FDE9", // 14 -bright cyan
+        "#FCE8C3", // 15 -bright white
 
 	[255] = 0,
 
 	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
-	"#555555",
-	"#FFFFFF",
-	"#000000",
+        "#1c1b19", // background
+        "#fce8c3", //foreground
 };
 
 
@@ -115,9 +114,9 @@ static const char *colorname[] = {
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 258;
-unsigned int defaultbg = 0;
-static unsigned int defaultcs = 256;
+unsigned int defaultfg = 257;
+unsigned int defaultbg = 256;
+static unsigned int defaultcs = 257;
 static unsigned int defaultrcs = 257;
 
 /*
@@ -140,14 +139,14 @@ static unsigned int rows = 24;
  * Default colour and shape of the mouse cursor
  */
 static unsigned int mouseshape = XC_xterm;
-static unsigned int mousefg = 7;
+static unsigned int mousefg = 257;
 static unsigned int mousebg = 0;
 
 /*
  * Color used to display font attributes when fontconfig selected a font which
  * doesn't match the ones requested.
  */
-static unsigned int defaultattr = 11;
+static unsigned int defaultattr = 257;
 
 /*
  * Internal mouse shortcuts.
